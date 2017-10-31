@@ -1,0 +1,26 @@
+
+permissions:
+# Any authenticated user can read these
+- operation: User.read
+  authenticated: true
+  fields:
+    - id
+    - firstName
+    - lastName
+    - avatarUrl
+
+# The admin and the owner can read everything
+- operation: User.read
+  authenticated: true
+  query: permissions/User.graphql:OwnerOrAdmin
+
+# must use register mutation
+#- operation: User.create
+
+- operation: User.update
+  authenticated: true
+  query: permissions/User.graphql:OwnerOrAdmin
+
+- operation: User.delete
+  authenticated: true
+  query: permissions/User.graphql:AdminOnly

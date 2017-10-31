@@ -1,0 +1,15 @@
+type User @model {
+    id: ID! @isUnique
+    firstName: String
+    lastName: String
+    avatarUrl: String
+    email: String @isUnique
+    password: String
+    createdAt: DateTime!
+    updatedAt: DateTime!
+}
+
+enum UserRole {
+    USER
+    ADMIN
+}

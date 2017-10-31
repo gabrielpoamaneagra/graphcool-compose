@@ -1,0 +1,10 @@
+type File @model {
+    contentType: String!
+    createdAt: DateTime!
+    id: ID! @isUnique
+    name: String!
+    secret: String! @isUnique
+    size: Int!
+    updatedAt: DateTime!
+    url: String! @isUnique
+}

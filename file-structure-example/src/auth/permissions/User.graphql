@@ -1,0 +1,27 @@
+query OwnerOrAdmin ($user_id: ID!, $node_id: ID!) {
+    SomeUserExists(filter: {
+        OR: [
+            {
+                AND: [
+                    {id: $node_id},
+                    {id: $user_id}
+                ]
+            },
+            {
+                AND: [
+                    {role: ADMIN},
+                    {id: $user_id}
+                ]
+            }
+        ]
+    })
+}
+
+query AdminOnly ($user_id: ID!) {
+    SomeUserExists(filter: {
+        AND: [
+            {role: ADMIN},
+            {id: $user_id}
+        ]
+    })
+}

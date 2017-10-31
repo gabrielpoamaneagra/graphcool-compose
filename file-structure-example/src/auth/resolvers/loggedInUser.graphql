@@ -1,0 +1,7 @@
+type LoggedInUserPayload {
+    id: ID
+}
+
+extend type Query {
+    loggedInUser: LoggedInUserPayload!
+}

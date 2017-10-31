@@ -1,0 +1,8 @@
+type SignupEmailUserPayload {
+    id: ID!
+    token: String!
+}
+
+extend type Mutation {
+    registerEmailUser(email: String!, password: String!, firstName: String!, lastName: String!): SignupEmailUserPayload
+}

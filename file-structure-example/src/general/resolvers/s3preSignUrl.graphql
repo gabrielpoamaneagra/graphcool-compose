@@ -1,0 +1,7 @@
+type S3SignedUrl {
+    url: String!
+}
+
+extend type Mutation {
+    s3PreSignUrl(bucket: String!, fileName: String!): S3SignedUrl!
+}

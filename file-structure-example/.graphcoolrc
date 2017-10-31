@@ -1,0 +1,6 @@
+targets:
+  dev: shared-us-west-2/****
+  default: dev
+  qa: shared-us-west-2/****
+  local: local/****
+  test: shared-eu-west-1/****
