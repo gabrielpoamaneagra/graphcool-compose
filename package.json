@@ -1,0 +1,17 @@
+{
+  "name": "graphcool-compose",
+  "version": "1.0.0",
+  "description": "graphcool - allow folder structure",
+  "main": "index.js",
+  "author": "Gabriel Poama-Neagra",
+  "license": "MIT",
+  "bin": {
+    "graphcool-compose": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.11.0",
+    "node-yaml": "^3.1.1",
+    "object-assign-deep": "^0.3.1"
+  }
+}
