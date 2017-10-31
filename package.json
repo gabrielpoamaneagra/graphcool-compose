@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "Gabriel Poama-Neagra",
   "license": "MIT",
+  "repository": "https://github.com/gabriel-poamaneagra/graphcool-composenp",
   "bin": {
     "graphcool-compose": "./index.js"
   },
